@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 将一种类型转换为另一种类型 & 进制转换
+			 */
+			
+			/*转换为string
+			 *    1:直接调用tostring()不影响原来数据，null undefined这两种没有tostring()方法不能调用
+			 *    2:调用String()函数，并将要转换的数据传递给函数参数可以是null undefined
+			 * 
+			 * var a=123;			
+			 * a=String(a);	
+		     * a=a.toString();
+			 */
+			
+			/* 转换方式一：
+			 *  转换为number
+			 *   1:使用Number()函数
+			 *      -字符串转数值，如果是纯数字则直接转换为number
+			 *      -如果有非数字则直接转换为NaN
+			 *      -如果字符串是空串或者全是空格则转换为0
+			 * 
+			 * 转换方式二：
+			 *   -这种方式专门对付字符串
+			 *   -parseInt（）把一个字符串转换为整数,可以将字符串中的有效整数取出来转换成number
+			 *   -parseFloat（）把一个字符串转换成浮点数
+			 *   -如果是非字符串使用的话，他会先将其转船成字符串然后在操作
+			 * var a="123";			
+			 * a= Number(a);
+			 * var b=false;
+			 * b=Number(b);
+			 * var c=NaN;
+			 * c=Number(c);
+			 * var d=undefined;
+			 * d=Number(d);			
+			 * var e="123px";
+			 * e=parseInt(e);
+			 * var f="123.456px";
+			 * f=parseFloat(f);
+			 */
+			
+			/* 进制之间的转换
+			 * JS中16进制数字以0x开头
+			 *     8进制以0开头(局限有些浏览器不支持像IE)
+			 * 
+			 * var a=0x10;
+			 *  var b=010;
+			 *  //var c=0b10;
+			 * var c="050";
+			 *  c=parseInt(c,8);
+			 */
+
+            /*转换为boolean
+             * 
+             */
+			
+			console.log(typeof c +" || "+c);		
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
