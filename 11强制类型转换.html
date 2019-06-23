@@ -55,10 +55,21 @@
 			 */
 
             /*转换为boolean
+             *   -使用Boolean函数
+             *   -数字-->除了0，NAN其余全是true
+             *   -字符串-->除了空串其余全是true
+             *   -null,undefined都是false
              * 
-             */
-			
-			console.log(typeof c +" || "+c);		
+             * var c=123;
+			 * c=NaN;
+			 * c="hello";
+			 * c="fasle";
+			 * c="";
+			 * c="   ";
+			 * c=null;
+			 * c=undefined;
+			 * c=Boolean(c);
+             */										
 			
 		</script>
 	</head>

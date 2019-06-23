@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/* JS中的数据类型 
+			 *  -String
+			 *  -Number
+			 *  -Boolean
+			 *  -Null
+			 *  -Undefined
+			 * ----------以上五种属于基本数据类型，以后的值只要不是上面的五种剩余的全是对象
+			 *  -Object
+			 * 
+			 * 基本数据类型都是单一的值，之间都没有关系。如果想表示一个人的信息的话不能满足一个整体的需求
+			 * 对象属于一种符合的数据类型，在对象中可以保存多个不同数据类型的属性
+			 * 对象的分类：
+			 *   1：内建对象
+			 *      -由ES标准中定义的对象，在任何ES的实现中都可以使用  eg: Math,String,Boolean,Number....
+			 *   2：宿主对象
+			 *      - 由JS的运行环境提供的对象，目前来讲主要指由浏览器提供的对象 eg :BOM,DOM
+			 *      例如：console,document等
+			 *   3：自定义对象
+			 *     -由开发人员自己定义的对象
+			 * 
+			 * 对象属性名以及属性值
+			 *   1：对象的属性名不强制要求遵守标识符的规范，什么名字都可以用
+			 *      如果用特殊的属性名，不能采用  对象.属性名  需要使用如下格式：对象[“属性名”]=属性值
+			 *      读取时也要采用这种形式
+			 *      采用[]形式的话更灵活可以在中括号中填写变量这样变量值是多少就会读取那个属性(推荐使用此种方式)
+			 *   2：属性值可以使任意的数据类型
+			 *      也可以是对象中的对象
+			 * 
+			 * 检查一个对象中是否有一个属性：
+			 *    使用 in 运算符，如果有则返回  true否则返回  false ，语法：“属性名” in 对象			 
+			 */
+			//创建对象并添加属性,语法：对象.属性名=属性值；
+			var obj=new Object();
+			obj.name="孙悟空";
+			obj.age=213;
+			obj.gender="男";
+
+            //修改属性值
+            obj.age=56;
+            
+            var aa="name";
+            //删除对象属性 delete 对象.属性
+            delete obj.age;
+            
+            console.log("name" in obj);
+            console.log("age" in obj);
+			console.log(obj[aa]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
