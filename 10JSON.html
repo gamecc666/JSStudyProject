@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/json2.js"></script>
+		<script type="text/javascript">
+			/*
+			 * JSON由于JS中的对象在别的语言中都不会被识别所以需要一种所有语言都可以是别的格式来进行通信
+			 * 这时候JOSN就出来了，全拼JS对象模型表示法，JSON是一种特殊格式的字符串
+			 * JSON中的属性名必须用双引号
+			 * JSON对象分类：
+			 *        1：对象
+			 *        2：数组
+			 * JSON中的值类型：
+			 *        1：字符创
+			 *        2：数值
+			 *        3：布尔值
+			 *        4：null
+			 *        5:对象
+			 *        6：数组
+			 * 转换方式：
+			 *        1：将JOSN字符串转换为JS中的对象
+			 *        2：将JS中的对象转化为JSON字符串
+			 * 
+			 * 对于IE7以下的版本会提示JSON未定义问题
+			 *        1:通过使用eval()方法,使用时候需注意如果JSON字符串被大括号｛｝包括的话，
+			 *          eval会把它处理为代码块，如果不想被当做代码块执行的话则需要在字符串前后加上（）
+			 *          格式为：（ jsonstr ）
+			 *          不推荐在项目中使用：代码执行性能差然后还具有安全隐患
+			 *        2:通过引入一个JS文件解决
+			 */
+			var _jsonobj='{"name":"孙悟空","age":29,"gender":"男"}';
+			var _jsonarr='[1,2,3,true,"Hello"]';
+			
+			var _obj={name:"gamecc666",age:12,gender:"男"}
+			
+			
+			var _arrafterconvert=JSON.parse(_jsonarr)
+			var _objafterconvert=JSON.stringify(_obj)
+						
+						
+            //var str='alert("Hello Gamecc666!")';
+            //将上面的_josnobj字符串转换为对象
+            var _evalobj=eval("("+_jsonobj+")");
+            var _evalarr=eval(_jsonarr);
+			console.log(typeof _evalarr[3])
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
