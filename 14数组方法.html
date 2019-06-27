@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>		
+		<!--数组方法
+			<script type="text/javascript">
+			var arr=["gamecc666"];
+			arr.push("猪八戒","孙悟空");
+			arr.pop();
+			//在数组前面添加一个或者多个元素，并返回新的数组长度
+			arr.unshift("小鱼");
+			//删除数组第一个元素并返回第一个值
+			res= arr.shift();
+			console.log(arr.length+" ||："+res);
+		</script>
+		-->
+		
+		<script type="text/javascript">			
+		var arr=["尊悟空","猪八戒","沙和尚","小朱","猴子"];
+		/* for循环遍历
+		 * for(var i=0;i<arr.length;i++)
+			{
+				console.log(arr[i]);
+			}
+		*/
+		/*forEace
+		 * oreach对于IE9以下没用,数组中有几个元素执行几次,浏览器会在回调函数里面传递三个参数
+		第一个参数是值，第二个参数是索引，第三个参数是正在遍历的数组
+		arr.forEach(function(value,index,object){
+			console.log(value+" ||"+index);
+		})
+		*/
+		//slice(startindex,endindex)不影响原数组，从索引位置开始索引到结束为止索引，不包含技术索引
+		//如果传负值则从后开始
+		var aff= arr.slice(0,2);
+		
+		//splice删除数组指定元素,会影响元数据,从第几个开始删几个,插入到开始位置的索引
+		var cc= arr.splice(1,2,"猫");
+		
+		console.log(cc)
+		console.log(arr)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
