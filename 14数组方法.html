@@ -16,6 +16,7 @@
 		</script>
 		-->
 		
+		<!--数组方法
 		<script type="text/javascript">			
 		var arr=["尊悟空","猪八戒","沙和尚","小朱","猴子"];
 		/* for循环遍历
@@ -41,6 +42,40 @@
 		console.log(cc)
 		console.log(arr)
 		</script>
+		-->
+    
+        <!-- 数组方法
+        <script type="text/javascript">
+        var arr=["孙悟空","猪八戒","沙和尚"];
+        var arr2=["小猴","小狗","小猫"];
+        var arr3=["小ji"];
+        var res=arr.concat(arr2,arr3,"小兔");
+        
+        //join将数组转换成字符串,参数：连接符，不指定的话默认为逗号
+        res=arr.join("*");
+        //reverse反转数组,会修改原数组
+        arr.reverse();
+        //sort()对数组中的元素进行排序，影响原数组,使用的是unicode方法排序对整数排序有时候不会正确
+        arr.sort();
+        //可以对sort()传入的函数来排序,如果返回>0则交换位置，<0位置不变，0认为等于0位置不变
+        arr5=[3,5,1,9,56];        
+        arr5.sort(function(a,b){
+        	/*if(a>b)
+        	{
+        		return 1;
+        	}
+        	else if(a<b)
+        	{
+        		return -1;
+        	}
+        	else
+        	return 0;*/
+            return a-b;
+        });
+        
+        console.log( arr5);
+        </script>
+        	-->
 	</head>
 	<body>
 	</body>

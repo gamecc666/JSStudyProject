@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 调用函数时会隐藏传递两个参数，1：this 2:封装实参的对象arguments0000000000
+			 * arguments是一个类数组对象
+			 * arguments.length就是实参的长度
+			 * callee属性返回当前正在指向的函数对象
+			 */
+			function fun()
+			{
+				//console.log(arguments instanceof Array);
+				//console.log(Array.isArray(arguments));
+				//console.log(arguments.length);
+				//console.log(arguments[0]);
+				console.log(arguments.callee==fun)
+			}
+			fun("dd",1,44,4);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

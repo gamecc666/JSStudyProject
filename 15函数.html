@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		function fun(a,b)
+		{
+			alert(a+" || "+b);
+		}
+		
+		var obj={name:"obj",
+		         sayName:function(){
+		         	alert(this.name)
+		         }};
+		var obj2={
+			name:"obj2",
+			sayName:function(){
+				
+			}
+		};
+		//obj.sayName.apply(obj2);
+		//fun.call(obj,2,3);
+		fun.apply(obj,[2,3]);
+		
+		/*
+		 * call(),apply()这两个方法都是函数对象的的方法，需要通过函数对象来调用;可以改变this的指向
+		 * call()方法可以将实参放在对象之后依次传递
+		 * apply()需要将实参封装到一个数组里统一传递
+		 * 
+		 * this情况：
+		 *   --以函数调用时永远是Windows
+		 *   --以方法调用时调用方法的对象
+		 *   --以构造函数调用时this是指定的那个对象
+		 *   --使用call()apply()调用时，this是指定的那个对象
+		*/
+		/*var obj={};
+		fun.call(obj);
+		fun.apply(obj);
+		fun();*/
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
